@@ -39,13 +39,9 @@ bindkey "^S" history-incremental-search-forward
 ##### alias #####
 
 alias ..='cd ..'
-
 alias mv='mv -i'
-
 alias cp='cp -i'
-
 alias cl='clear'
-
 alias mkdir='mkdir -p'
 
 case ${OSTYPE} in
