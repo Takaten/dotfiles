@@ -65,8 +65,6 @@ zplug zsh-users/zsh-completions
 zplug mafredri/zsh-async, from:github
 zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
-zplug "~/.zsh", from:local
-
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
