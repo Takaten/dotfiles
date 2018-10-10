@@ -1,5 +1,9 @@
 ##### zsh options #####
 
+# locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # auto-completion
 autoload -Uz compinit
 compinit
@@ -73,3 +77,10 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+##### anyenv #####
+
+if [ -d ${HOME}/.anyenv ]; then
+	export PATH="$HOME/.anyenv/bin:$PATH"
+	eval "$(anyenv init -)"
+fi
