@@ -1,5 +1,9 @@
 ##### zsh options #####
 
+# zmv
+autoload -Uz zmv
+alias zmv="noglob zmv"
+
 # locale
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -43,10 +47,13 @@ bindkey "^S" history-incremental-search-forward
 ##### alias #####
 
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias mv='mv -i'
 alias cp='cp -i'
 alias cl='clear'
 alias mkdir='mkdir -p'
+alias g='git'
 
 case ${OSTYPE} in
     darwin*)
@@ -59,6 +66,11 @@ alias la='ls -a'
 alias ll='ls -l'
 
 alias reload='exec $SHELL -l'
+
+alias trash='rmtrash'
+alias rmt='rmtrash'
+
+export PATH=$HOME/bin:$PATH
 
 ##### zplug #####
 
